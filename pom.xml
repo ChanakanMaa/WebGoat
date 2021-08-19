@@ -274,7 +274,7 @@
         </profile>
     </profiles>
 
-    <repositories>
+<!--     <repositories>
         <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
@@ -291,7 +291,28 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories> -->
+	
+	<distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <name>Webapp proxy</name>
+      <url>http://192.168.1.192:8081/repository/mvn-project/</url>
+    </repository>
+    <snapshotRepository>
+            <id>nexus</id>
+            <name>Internal Snapshot</name>
+            <url>http://192.168.1.192:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+  </distributionManagement>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+    </dependency>
+  </dependencies>
 
 
 </project>
