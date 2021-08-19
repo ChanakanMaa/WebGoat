@@ -6,6 +6,19 @@
     <artifactId>webgoat-lessons-parent</artifactId>
     <packaging>pom</packaging>
     <version>8.2.1-SNAPSHOT</version>
+	
+	<distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <name>Webapp proxy</name>
+      <url>http://192.168.1.192:8081/repository/mvn-project/</url>
+    </repository>
+    <snapshotRepository>
+            <id>nexus</id>
+            <name>Internal Snapshot</name>
+            <url>http://192.168.1.192:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+  </distributionManagement>
 
     <parent>
         <groupId>org.owasp.webgoat</groupId>
@@ -84,17 +97,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-  
-  <distributionManagement>
-    <repository>
-      <id>nexus</id>
-      <name>Webapp proxy</name>
-      <url>http://192.168.1.192:8081/repository/mvn-project/</url>
-    </repository>
-    <snapshotRepository>
-            <id>nexus</id>
-            <name>Internal Snapshot</name>
-            <url>http://192.168.1.192:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-  </distributionManagement>
+ 
 </project>
