@@ -6,12 +6,12 @@
   
 <distributionManagement>
     <repository>
-      <id>nexus</id>
+      <id>nexusjen</id>
       <name>Webapp proxy</name>
       <url>http://192.168.1.192:8081/repository/mvn-project/</url>
     </repository>
     <snapshotRepository>
-            <id>nexus</id>
+            <id>nexusjen</id>
             <name>Internal Snapshot</name>
             <url>http://192.168.1.192:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
